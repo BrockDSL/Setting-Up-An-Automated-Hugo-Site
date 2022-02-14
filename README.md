@@ -65,10 +65,10 @@ Now that our back-end site has all the pieces needed to run Hugo, we need to set
 - Open your personal access token list (from left menu)
 - Click “Generate new token”
 - Fill out the form
- - It is recommended to describe what the token is going to be used for in the note section
- - For expiration it is easiest to set no expiration date but be aware that there is a risk to doing this.  (read the documentation linked in the warning for more information)
- - If this token will only be used for hugo site automation as described in this guide then you only need the “repo” and “workflow” scope checked
- - Click “Generate token” at the bottom of the page
+  - It is recommended to describe what the token is going to be used for in the note section
+  - For expiration it is easiest to set no expiration date but be aware that there is a risk to doing this.  (read the documentation linked in the warning for more information)
+  - If this token will only be used for hugo site automation as described in this guide then you only need the “repo” and “workflow” scope checked
+  - Click “Generate token” at the bottom of the page
 - Your token will now be displayed in the token list
 - COPY YOUR TOKEN TO A SECURE LOCATION as this is the only time you will ever be able to see your token.  If you lose it you will need to make a new one.
 Once you have a personal access token, go back to your back-end repository and open the settings.  From the left hand menu, click “Secrets” and the “Actions”.  This is where you can create encrypted variable for use in your GitHub actions.  Keep in mind that anyone with collaborator or higher access to your repository can use these variables.
