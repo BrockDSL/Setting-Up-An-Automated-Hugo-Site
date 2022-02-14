@@ -8,10 +8,10 @@ This is done by having 2 GitHub repositories.  One for the front end that just h
 
 # Prep
 Things you need to do before you start:
-- Install Hugo on your computer and make sure it is added to your PATH (find the instructions for your OS here)
-- Make sure you have a GitHub account (get one here if you don’t)
-- Install git on your computer (Instructions found here)
-- Choose the Hugo theme that you will want to use (find a list of themes here)
+- Install Hugo on your computer and make sure it is added to your PATH (find the instructions for your OS [here](https://gohugo.io/getting-started/installing/))
+- Make sure you have a GitHub account (get one [here](https://github.com/login) if you don’t)
+- Install git on your computer (Instructions found [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
+- Choose the Hugo theme that you will want to use (find a list of themes [here](https://themes.gohugo.io/))
 - Create a repository for the front end of your site.  You don’t need to add a README file or anything else to this site.  Give it a clean name as this will be in the URL of your new site (unless you are making a custom domain)
 - Create a second repository for the backend of your site.  Make sure not to add anything to this site yet, not even a README file unless you are comfortable using git from the command line to resolve conflicts.  This repository can be named whatever you want but a good rule of thumb is to name it the same as your front end site but with the word SOURCE or BACKEND in front. (eg. “SOURCE-my-website-name”)
 
@@ -24,7 +24,7 @@ Now that you have a Hugo site prepped, move into the site folder using the cd co
 
     git submodule add https://github.com/apvarun/blist-hugo-theme.git themes/blist
 
-Once the theme is installed as a submodule, look at the theme’s documentation (found on the Hugo themes directory) to see if it requires configuration.  Very basic themes might work simply by adding it as a submodule but most of the more complex themes require additional steps.  In the case of the Blist theme used in this example, the documentation walks you through how to set up some Node JS features and a css manager called PostCSS that are needed to use the theme.
+Once the theme is installed as a submodule, look at the theme’s documentation (found on the [Hugo themes directory](https://themes.gohugo.io/)) to see if it requires configuration.  Very basic themes might work simply by adding it as a submodule but most of the more complex themes require additional steps.  In the case of the Blist theme used in this example, the documentation walks you through how to set up some Node JS features and a css manager called PostCSS that are needed to use the theme.
 
 And just like that you have a Hugo site with a theme!  Now we need to adjust the config.toml file to reflect the correct url for your site.  Open up the config.toml file in the root folder of your site and update the baseurl field to reflect your sites location.  Use the format below by replacing GITHUBUSERNAME with your username or the name of the GitHub organization that the site is in and replace NAMEOFSITE with the name of your front-end site.
 
@@ -52,7 +52,7 @@ Before we move the Hugo builder up to our back-end repository, we need to remove
 Once the public folder is removed, the steps to move your builder to GitHub are the same as when you set up the front-end site except you are uploading to your back-end repository.  
 
     git remote add origin https://github.com/GITHUBUSERNAME/NAMEOFBACKENDSITE.git
-    git add .  (This might look like a lot depending on what theme you are using)
+    git add .  \(This might look like a lot depending on what theme you are using)
     git commit -m "Initial commit"
     git push --set-upstream origin master
 
@@ -130,5 +130,5 @@ jobs:
 
 Once you have your action built, commit it and it will run automatically.
 
-Wrap Up
+# Wrap Up
 And with that you are all set!  From now on when you make a change to your hugo site files in the back-end repository, it will automatically build a new version of your site containing those changes and push it to your front-end repository!
