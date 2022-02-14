@@ -17,7 +17,7 @@ Things you need to do before you start:
 
 # Building the Site
 The first step is to open a command line interface on your machine, navigate to a folder that has access to both Hugo and Git, and to make build your base Hugo site using the command below.
-'hugo new site NameOfSite'
+'code' hugo new site NameOfSite 'code'
 Now that you have a Hugo site prepped, move into the site folder using the cd command (cd NameOfSite), initialize the folder as a git repository (git init), and add your theme.  In most cases, this will be done by adding the theme as a git submodule and the code to do this should be listed on the webpage for the theme.  An example of what that code should look like can be seen below (the examples shows adding the “Blist” theme).
 git submodule add https://github.com/apvarun/blist-hugo-theme.git themes/blist
 Once the theme is installed as a submodule, look at the theme’s documentation (found on the Hugo themes directory) to see if it requires configuration.  Very basic themes might work simply by adding it as a submodule but most of the more complex themes require additional steps.  In the case of the Blist theme used in this example, the documentation walks you through how to set up some Node JS features and a css manager called PostCSS that are needed to use the theme.
