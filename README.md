@@ -52,7 +52,7 @@ Before we move the Hugo builder up to our back-end repository, we need to remove
 Once the public folder is removed, the steps to move your builder to GitHub are the same as when you set up the front-end site except you are uploading to your back-end repository.  
 
     git remote add origin https://github.com/GITHUBUSERNAME/NAMEOFBACKENDSITE.git
-    git add .  \(This might look like a lot depending on what theme you are using)
+    git add .
     git commit -m "Initial commit"
     git push --set-upstream origin master
 
