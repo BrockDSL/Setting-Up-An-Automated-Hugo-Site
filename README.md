@@ -71,12 +71,17 @@ Now that our back-end site has all the pieces needed to run Hugo, we need to set
   - Click “Generate token” at the bottom of the page
 - Your token will now be displayed in the token list
 - COPY YOUR TOKEN TO A SECURE LOCATION as this is the only time you will ever be able to see your token.  If you lose it you will need to make a new one.
+
 Once you have a personal access token, go back to your back-end repository and open the settings.  From the left hand menu, click “Secrets” and the “Actions”.  This is where you can create encrypted variable for use in your GitHub actions.  Keep in mind that anyone with collaborator or higher access to your repository can use these variables.
+
 Create a new secret by clicking the “New repository secret” button.  Here you will give a name to the variable that will be used in your actions and then paste your personal access key into the “Value” box ensuring that you do not add any extra characters or whitespace.  You can name your variable whatever you like but for the purposes of this guide we will call it PERSONAL_TOKEN as that is what it contains.  Once you have named the variable and pasted your token, click “Add secret” to create it.
 
-Building the Action
+# Building the Action
 Now that we have our permissions variable, it is time to write the action that will do handle our automation.  To begin, go to the Actions section of your back-end repository.  Since we are just making a single action, we will click the “set up a workflow yourself” option near the top of the page which will create a new action for us and open the editor.
+
 Read through the template provided to get an idea of how to set up an action.  Below is an example action that works for the Blist theme with notes explaining each piece.  Notice the task that install dependencies.  Make sure whatever dependencies your theme needs are installed before the Buid task.
+
+```
 
 #Name of action
 name: hugo CI
@@ -121,6 +126,7 @@ jobs:
           publish_branch: master
           publish_dir: ./public
 
+```
 
 Once you have your action built, commit it and it will run automatically.
 
