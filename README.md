@@ -129,11 +129,11 @@ Once you have your action built, commit it and it will run automatically.
 
 # Wrap Up
 And with that you are all set!  From now on when you make a change to your Hugo site files in the back-end repository, it will automatically build a new version of your site containing those changes and push it to your front-end repository! 
-
  
+  
+  
  
-
-Links: 
+# Links: 
 
 This guide is loosely based off of the guide made by Panr, author of “My Tech Ramblings” found [here](https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/) 
 
